@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](#)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/coding-bootcamp-testimonials-slider-lRTERqaQRx)
 - Live Site URL: [Live site](https://coding-bootcamp-testimonials-pex-dev.netlify.app/)
 
 ## My process
