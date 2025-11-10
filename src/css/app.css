@@ -1,0 +1,216 @@
+:root {
+  --primary-text-color: hsl(240, 38%, 20%);
+  --secondary-text-color: hsl(240, 18%, 77%);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 50% auto;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.testimonials {
+  display: flex;
+}
+
+.testimonial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 7rem;
+  color: var(--primary-text-color);
+  min-width: 100dvw;
+  transition: opacity 0.4s ease;
+}
+
+.testimonial__content {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 1rem;
+}
+
+.testimonial__content::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/pattern-quotes.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8rem;
+  height: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -4rem;
+}
+
+.testimonial__text {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.testimonial__cite {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.testimonial__cite span {
+  font-weight: normal;
+  color: var(--secondary-text-color);
+}
+
+.testimonial__pattern-quotes {
+  position: absolute;
+  left: 11rem;
+  top: 4.5rem;
+}
+
+.testimonial__image {
+  position: relative;
+  background-image: url("../images/pattern-bg.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 3rem;
+}
+
+.testimonial__image img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 10px 32px 45px -21px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 10px 32px 45px -21px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 32px 45px -21px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial__buttons {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.7rem;
+  background-color: white;
+  width: fit-content;
+  padding: 1.5rem 1.8rem;
+  border-radius: 3rem;
+  box-shadow: 10px 32px 45px -21px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 10px 32px 45px -21px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 32px 45px -21px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* Media Queries */
+
+/* tablet */
+@media (min-width: 768px) {
+  .testimonial {
+    flex-direction: row;
+    align-items: center;
+    max-width: none;
+    height: auto;
+    gap: 0;
+  }
+  .testimonial__content {
+    left: 5rem;
+    max-width: 50rem;
+    padding: 0;
+  }
+  .testimonial__content::before {
+    left: 10rem;
+  }
+
+  .testimonial__text {
+    text-align: left;
+    font-size: 2.3rem;
+    word-spacing: 0.2rem;
+    font-weight: 300;
+  }
+  .testimonial__cite {
+    display: block;
+    font-size: 2.2rem;
+    text-align: left;
+    margin-top: 3rem;
+  }
+
+  .testimonial__image {
+    right: 2rem;
+    padding: 4rem;
+    min-width: 40rem;
+  }
+
+  .testimonial__buttons {
+    padding: 2rem 2.2rem;
+    left: 35%;
+    transform: translateX(-35%);
+    bottom: 1rem;
+  }
+}
+
+/* desktop */
+@media (min-width: 1240px) {
+  .testimonial__content {
+    max-width: 70rem;
+    left: 10rem;
+  }
+  .testimonial__content::before {
+    width: 14rem;
+    height: 14rem;
+    left: 19rem;
+    top: -8rem;
+  }
+
+  .testimonial__text {
+    text-align: left;
+    font-size: 3.3rem;
+    word-spacing: 1rem;
+    font-weight: 300;
+  }
+
+  .testimonial__image {
+    padding: 6rem;
+    right: 5rem;
+    width: auto;
+  }
+
+  .testimonial__buttons {
+    bottom: 3rem;
+  }
+}
